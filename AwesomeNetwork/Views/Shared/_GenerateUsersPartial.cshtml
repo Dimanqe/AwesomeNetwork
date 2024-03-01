@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using AwesomeNetwork.Models.Users;
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <form method="get" asp-controller="AccountManager" asp-action="Generate">
+        <button class="btn-sm" type="submit">Сгенерировать случайных пользователей</button>
+    </form>
+}
+
+
+
+
+
